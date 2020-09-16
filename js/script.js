@@ -2,12 +2,12 @@ $(document).ready(function() {
 
 
 //$(document).on("click", ".arrow", function() {
-  $(".quadratino").click(function() {
+  $(document).on("click", ".quadratino", function() {
     $.ajax({
     url: "https://flynn.boolean.careers/exercises/api/random/int",
     method: "GET",
     success: function (data, stato) {
-      $(this).html(data);
+      $(this).html(data.response);
     },
     error: function (richiesta, stato, errori) {
       alert("Errore: "+errori);
