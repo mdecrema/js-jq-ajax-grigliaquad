@@ -1,11 +1,13 @@
 $(document).ready(function() {
 
-  $("#uno").click(function() {
+
+//$(document).on("click", ".arrow", function() {
+  $(".quadratino").click(function() {
     $.ajax({
-    url: "http://flynn.boolean.careers/exercises/api/random/int",
+    url: "https://flynn.boolean.careers/exercises/api/random/int",
     method: "GET",
     success: function (data, stato) {
-      console.log(data);
+      $(this).html(data);
     },
     error: function (richiesta, stato, errori) {
       alert("Errore: "+errori);
@@ -13,11 +15,11 @@ $(document).ready(function() {
   })
   })
 
-var num = Math.floor(Math.random() * 10)+1;
+//var num = Math.floor(Math.random() * 10)+1;
 
   var quad = {
     "quadratino": "qua",
-    "numero": num,
+    "numero": "",
   }
 
   var source = $("#entry-template").html();
