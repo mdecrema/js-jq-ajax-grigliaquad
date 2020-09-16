@@ -7,18 +7,24 @@ $(document).ready(function() {
     url: "https://flynn.boolean.careers/exercises/api/random/int",
     method: "GET",
     success: function (data, stato) {
-      $("#due").html(data.response);
-      if (data.response <= 5) {
-        $("#due").css({backgroundColor: "yellow"});
-      } else {
-        $("#due").css({backgroundColor: "green"});
-      }
+      var valore = data.response;
+      $("#due").html(valore);
+      maggioreCinque(valore);
     },
     error: function (richiesta, stato, errori) {
       alert("Errore: "+errori);
     }
   })
   })
+
+// Funzione di controllo numero
+  function maggioreCinque(num){
+    if (num <= 5) {
+      $("#due").css({backgroundColor: "yellow"});
+    } else {
+      $("#due").css({backgroundColor: "green"});
+    }
+  }
 
 //var num = Math.floor(Math.random() * 10)+1;
 
