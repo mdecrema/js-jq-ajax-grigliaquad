@@ -2,14 +2,14 @@ $(document).ready(function() {
 
 
 //$(document).on("click", ".arrow", function() {
-  $(document).on("click", "#uno", function() {
+  $(document).on("click", ".quadratino", function() {
+    var elemento = $(this);
     $.ajax({
     url: "https://flynn.boolean.careers/exercises/api/random/int",
     method: "GET",
     success: function (data, stato) {
       var valore = data.response;
-      $("#due").html(valore);
-      maggioreCinque(valore);
+      maggioreCinque(valore, elemento);
     },
     error: function (richiesta, stato, errori) {
       alert("Errore: "+errori);
@@ -18,11 +18,12 @@ $(document).ready(function() {
   })
 
 // Funzione di controllo numero
-  function maggioreCinque(num){
+  function maggioreCinque(num, el){
+    el.html(num);
     if (num <= 5) {
-      $("#due").css({backgroundColor: "yellow"});
+      el.css({backgroundColor: "yellow"});
     } else {
-      $("#due").css({backgroundColor: "green"});
+      el.css({backgroundColor: "green"});
     }
   }
 
