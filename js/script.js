@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 
 //$(document).on("click", ".arrow", function() {
-  $(document).on("click", ".quadratino", function() {
+  $(document).on("click", ".quad", function() {
     var elemento = $(this);
     $.ajax({
     url: "https://flynn.boolean.careers/exercises/api/random/int",
@@ -21,16 +21,16 @@ $(document).ready(function() {
   function maggioreCinque(num, el){
     el.html(num);
     if (num <= 5) {
-      el.css({backgroundColor: "yellow"});
+      el.addClass("yellow");
     } else {
-      el.css({backgroundColor: "green"});
+      el.addClass("green");
     }
   }
 
 //var num = Math.floor(Math.random() * 10)+1;
 
   var quad = {
-    "quadratino": "qua",
+    "quadratino": "quad",
     "numero": "",
   }
 

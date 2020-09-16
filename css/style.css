@@ -27,13 +27,22 @@
   height: calc(100% / 6);
 }
 
-.qua {
+.quad {
   width: calc((100% / 6) - 4px);
   height: 100%;
   border: 1px solid #000;
   display: inline-block;
   text-align: center;
   cursor: pointer;
+  overflow: hidden;
+}
+
+.quad.yellow {
+  background-color: yellow;
+}
+
+.quad.green {
+  background-color: green;
 }
 
 /* PROVA */
