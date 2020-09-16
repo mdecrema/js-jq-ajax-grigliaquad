@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Griglia Quadratini AJAX</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+  </head>
+  <body>
+    <div class="griglia-wrapper">
+        <div class="griglia">
+          <!-- Prima linea -->
+          <div class="griglia-row uno">
+
+          </div>
+          <!-- Seconda linea -->
+          <div class="griglia-row due">
+          </div>
+          <!-- Terza linea -->
+          <div class="griglia-row tre">
+          </div>
+          <!-- Quarta linea -->
+          <div class="griglia-row quattro">
+          </div>
+          <!-- Quinta linea -->
+          <div class="griglia-row cinque">
+          </div>
+          <!-- Sesta linea -->
+          <div class="griglia-row sei">
+          </div>
+        </div>
+    </div>
+
+    <script id="entry-template" type="text/x-handlebars-template">
+
+        <div class="{{quadratino}}">
+          {{numero}}
+        </div>
+
+    </script>
+
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
